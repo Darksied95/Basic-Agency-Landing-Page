@@ -38,7 +38,7 @@ const Header = () => {
           </li>
         </ul>
         <div>
-          <span>BASIC/DEPT®, inc</span>
+          <span className="text-3xl">BASIC/DEPT®, inc</span>
           <span>10 - 23©</span>
         </div>
       </div>

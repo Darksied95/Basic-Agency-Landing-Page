@@ -1,21 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  background-color: white;
-  color: white;
-}
-
-img {
-  max-width: 100%;
-}
-
-@media screen and (min-width: 1250px) {
-  .mobile {
-    display: none;
-  }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
