@@ -1,15 +1,64 @@
 import React from "react";
-import Logo from "../Assets/logo.svg";
+import Logo from "../Assets/Logo.jsx";
 import Close from "../Assets/close.svg";
 import Sign from "../Assets/sign.svg";
+import Video from "../Assets/Header-video.mp4";
+import { useEffect, useRef } from "react";
+import "./Header.css";
 
 const Header = () => {
+  const cursorRef = useRef();
+  const mousemoveHandler = (e) => {
+    const { clientX, clientY } = e;
+    cursorRef.current.style.top = clientY - 20 + "px";
+    cursorRef.current.style.left = clientX - 20 + "px";
+  };
+  useEffect(() => {
+    document
+      .querySelector("#header")
+      .addEventListener("mousemove", mousemoveHandler);
+
+    return () => {
+      document.removeEventListener("mousemove", mousemoveHandler);
+    };
+  }, []);
+
   return (
-    <header>
-      <img src={Logo} alt="Basic/Dept" />
-      <div>
+    <header
+      id="header"
+      className="flex justify-between items-center px-4 pt-4 cursor-none overflow-hidden"
+    >
+      <div
+        ref={cursorRef}
+        className="absolute top-1/2 left-1/2  w-28 flex flex-col"
+      >
+        <p className="bg-white rounded-[50%]  aspect-square text-center uppercase mx-3 mb-5 ">
+          Play <br />
+          Reel
+        </p>
+        <div className="text-white">
+          <span>BASIC/DEPT®</span>
+          <br />
+          <span>10 - 23©</span>
+        </div>
+      </div>
+
+      <video
+        autoPlay
+        loop
+        muted
+        className="fixed inset-0  min-h-screen object-cover -z-10"
+      >
+        <source src={Video} type="video/mp4" />
+      </video>
+
+      <div className="w-40">
+        <Logo fill="#f4f4f4" />
+      </div>
+
+      <div className="hidden">
         <div>
-          <img src={Logo} alt="Basic/Dept" />
+          <Logo />
           <img src={Close} alt="Basic/Dept" />
         </div>
         <ul>
@@ -37,12 +86,13 @@ const Header = () => {
             </a>
           </li>
         </ul>
+
         <div>
           <span>BASIC/DEPT®, inc</span>
           <span>10 - 23©</span>
         </div>
       </div>
-      <button>Menu</button>
+      <button className="text-2xl text-[#f4f4f4]">Menu</button>
     </header>
   );
 };
