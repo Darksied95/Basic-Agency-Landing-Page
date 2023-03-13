@@ -1,19 +1,28 @@
 import React from "react";
 import Logo from "../../Assets/Logo.jsx";
 import Video from "../../Assets/Header-video.mp4";
-import { useEffect, useRef } from "react";
+import More from "../../Assets/more.svg";
+import { useEffect, useRef, useState } from "react";
 import Modal from "./Header-Modal";
 import "./Header.css";
 
 const Header = () => {
+  const [showCursor, setshowCursor] = useState(false);
+  const [showModal, setshowModal] = useState(false);
   const cursorRef = useRef();
 
   const mousemoveHandler = (e) => {
     const { clientX, clientY } = e;
+    if (clientY < 90) {
+      mouseleaveHandler();
+      setshowCursor(true);
+      return;
+    }
     cursorRef.current.style.top = clientY - 35 + "px";
     cursorRef.current.style.left = clientX - 35 + "px";
+    setshowCursor(false);
   };
-  const mouseleaveHandler = (e) => {
+  const mouseleaveHandler = () => {
     cursorRef.current.style.top = "50%";
     cursorRef.current.style.left = "50%";
   };
@@ -36,9 +45,11 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="flex justify-between items-center px-4 pt-4 cursor-none overflow-hidden relative h-screen"
+      className={`flex justify-between items-center px-10 pt-10 overflow-hidden relative h-screen xl:px-20 ${
+        showCursor ? "cursor-auto" : "cursor-none"
+      }`}
     >
-      {/* <Modal /> */}
+      {showModal && <Modal onCloseModal={handleCloseModal} />}
       <div
         ref={cursorRef}
         className="absolute top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none"
@@ -71,8 +82,8 @@ const Header = () => {
         <Logo fill="#f4f4f4" />
       </div>
 
-      <div className="self-start hidden ">
-        <ul>
+      <div className=" hidden self-start flex-1 xl:block ">
+        <ul className="text-white flex justify-around px-20 font-semibold uppercase">
           <li>
             <a href="/">Work</a>
           </li>
@@ -93,9 +104,20 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <button className="text-2xl text-[#f4f4f4] self-start">Menu</button>
+      <button
+        className="text-2xl text-[#f4f4f4] self-start xl:hidden"
+        onClick={() => setshowModal(true)}
+      >
+        Menu
+      </button>
+      <button className="text-2xl text-[#f4f4f4] self-start  w-6 mt-2 hidden xl:block">
+        <img src={More} alt="" />
+      </button>
     </header>
   );
+  function handleCloseModal() {
+    setshowModal(false);
+  }
 };
 
 export default Header;

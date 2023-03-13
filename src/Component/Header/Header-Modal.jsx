@@ -3,15 +3,18 @@ import Close from "../../Assets/close.svg";
 import Sign from "../../Assets/sign.svg";
 import Logo from "../../Assets/Logo.jsx";
 
-const Modal = () => {
+const Modal = ({ onCloseModal }) => {
   return (
-    <div className="hidden fixed inset-0 bg-[#252422] text-[#f9cdcd] text-xl font-semibold h-screen z-20 cursor-auto py-10 px-10 md:text-3xl">
+    <div className=" fixed inset-0 bg-[#252422] text-[#f9cdcd] text-xl font-semibold h-screen z-20 cursor-auto py-10 px-10 md:text-3xl">
       <div className="flex h-[30px] justify-between mb-16">
         <div className="w-[130px] ">
           <Logo fill={"#f9cdcd"} />
         </div>
 
-        <div className=" outline-white outline outline-1 grid place-content-center w-7 aspect-square rounded-[50%] cursor-pointer">
+        <div
+          className=" outline-white outline outline-1 grid place-content-center w-7 aspect-square rounded-[50%] cursor-pointer"
+          onClick={onCloseModal}
+        >
           <img src={Close} alt="Basic/Dept" className="w-4" />
         </div>
       </div>
