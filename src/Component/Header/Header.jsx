@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../../Assets/Logo.jsx";
 import Video from "../../Assets/Header-video.mp4";
 import { useEffect, useRef } from "react";
+import Modal from "./Header-Modal";
 import "./Header.css";
 
 const Header = () => {
@@ -35,11 +36,12 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="flex justify-between items-center px-4 pt-4 cursor-none overflow-hidden"
+      className="flex justify-between items-center px-4 pt-4 cursor-none overflow-hidden relative h-screen"
     >
+      {/* <Modal /> */}
       <div
         ref={cursorRef}
-        className="absolute top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 "
+        className="absolute top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none"
       >
         <div className="bg-white rounded-[50%]  aspect-square text-center uppercase mx-3 mb-2 grid place-content-center">
           <p className="text-[11px] font-semibold leading-3 lg:text-[15px] lg:leading-5">
@@ -65,11 +67,11 @@ const Header = () => {
         <source src={Video} type="video/mp4" />
       </video>
 
-      <div className="w-36">
+      <div className="w-36 self-start">
         <Logo fill="#f4f4f4" />
       </div>
 
-      <div className="hidden">
+      <div className="self-start hidden ">
         <ul>
           <li>
             <a href="/">Work</a>
@@ -91,7 +93,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <button className="text-2xl text-[#f4f4f4]">Menu</button>
+      <button className="text-2xl text-[#f4f4f4] self-start">Menu</button>
     </header>
   );
 };

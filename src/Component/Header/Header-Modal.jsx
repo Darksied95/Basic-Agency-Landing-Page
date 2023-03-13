@@ -1,40 +1,52 @@
+import React from "react";
 import Close from "../../Assets/close.svg";
 import Sign from "../../Assets/sign.svg";
 import Logo from "../../Assets/Logo.jsx";
 
-<div className="hidden">
-  <div>
-    <Logo />
-    <img src={Close} alt="Basic/Dept" />
-  </div>
-  <ul>
-    <li>
-      <a href="/">Work</a>
-    </li>
-    <li>
-      <a href="/">About</a>
-    </li>
-    <li>
-      <a href="/">news</a>
-    </li>
-    <li>
-      <a href="/">Thinking</a>
-    </li>
-    <li>
-      <a href="/">Careers</a>
-    </li>
-    <li>
-      <a href="/">Contact</a>
-    </li>
-    <li>
-      <a href="/">
-        initiatives <img src={Sign} alt="" />
-      </a>
-    </li>
-  </ul>
+const Modal = () => {
+  return (
+    <div className="hidden fixed inset-0 bg-[#252422] text-[#f9cdcd] text-xl font-semibold h-screen z-20 cursor-auto py-10 px-10 md:text-3xl">
+      <div className="flex h-[30px] justify-between mb-16">
+        <div className="w-[130px] ">
+          <Logo fill={"#f9cdcd"} />
+        </div>
 
-  <div>
-    <span>BASIC/DEPT®, inc</span>
-    <span>10 - 23©</span>
-  </div>
-</div>;
+        <div className=" outline-white outline outline-1 grid place-content-center w-7 aspect-square rounded-[50%] cursor-pointer">
+          <img src={Close} alt="Basic/Dept" className="w-4" />
+        </div>
+      </div>
+      <ul>
+        <li className="mb-5 uppercase  text-lg font-bold md:text-2xl ">
+          <a href="/">Work</a>
+        </li>
+        <li className="mb-5 uppercase text-lg font-bold md:text-2xl ">
+          <a href="/">About</a>
+        </li>
+        <li className="mb-5 uppercase text-lg font-bold md:text-2xl ">
+          <a href="/">news</a>
+        </li>
+        <li className="mb-5 uppercase text-lg font-bold md:text-2xl ">
+          <a href="/">Thinking</a>
+        </li>
+        <li className="mb-5 uppercase text-lg font-bold md:text-2xl ">
+          <a href="/">Careers</a>
+        </li>
+        <li className="mb-5 uppercase text-lg font-bold md:text-2xl ">
+          <a href="/">Contact</a>
+        </li>
+        <li className="mb-5 uppercase text-lg font-bold md:text-2xl ">
+          <a href="/">
+            initiatives{" "}
+            <img src={Sign} alt="" className="w-4 inline -rotate-90" />
+          </a>
+        </li>
+      </ul>
+
+      <div className="absolute bottom-0 text-[12px] mb-8 opacity-20">
+        <span>BASIC/DEPT®, INC</span>
+      </div>
+    </div>
+  );
+};
+
+export default Modal;
