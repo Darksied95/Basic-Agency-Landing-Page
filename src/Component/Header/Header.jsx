@@ -1,8 +1,6 @@
 import React from "react";
-import Logo from "../Assets/Logo.jsx";
-import Close from "../Assets/close.svg";
-import Sign from "../Assets/sign.svg";
-import Video from "../Assets/Header-video.mp4";
+import Logo from "../../Assets/Logo.jsx";
+import Video from "../../Assets/Header-video.mp4";
 import { useEffect, useRef } from "react";
 import "./Header.css";
 
@@ -67,15 +65,11 @@ const Header = () => {
         <source src={Video} type="video/mp4" />
       </video>
 
-      <div className="w-40">
+      <div className="w-36">
         <Logo fill="#f4f4f4" />
       </div>
 
       <div className="hidden">
-        <div>
-          <Logo />
-          <img src={Close} alt="Basic/Dept" />
-        </div>
         <ul>
           <li>
             <a href="/">Work</a>
@@ -95,17 +89,7 @@ const Header = () => {
           <li>
             <a href="/">Contact</a>
           </li>
-          <li>
-            <a href="/">
-              initiatives <img src={Sign} alt="" />
-            </a>
-          </li>
         </ul>
-
-        <div>
-          <span>BASIC/DEPT®, inc</span>
-          <span>10 - 23©</span>
-        </div>
       </div>
       <button className="text-2xl text-[#f4f4f4]">Menu</button>
     </header>
