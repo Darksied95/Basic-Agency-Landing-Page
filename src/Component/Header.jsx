@@ -10,8 +10,8 @@ const Header = () => {
   const cursorRef = useRef();
   const mousemoveHandler = (e) => {
     const { clientX, clientY } = e;
-    cursorRef.current.style.top = clientY - 20 + "px";
-    cursorRef.current.style.left = clientX - 20 + "px";
+    cursorRef.current.style.top = clientY - 35 + "px";
+    cursorRef.current.style.left = clientX - 35 + "px";
   };
   useEffect(() => {
     document
@@ -30,21 +30,24 @@ const Header = () => {
     >
       <div
         ref={cursorRef}
-        className="absolute top-1/2 left-1/2  w-28 flex flex-col"
+        className="absolute top-1/2 left-1/2  w-24 flex flex-col justify-center "
       >
-        <p className="bg-white rounded-[50%]  aspect-square text-center uppercase mx-3 mb-5 ">
-          Play <br />
-          Reel
-        </p>
-        <div className="text-white">
+        <div className="bg-white rounded-[50%]  aspect-square text-center uppercase mx-3 mb-2 grid place-content-center">
+          <p className="text-xs">
+            Play <br />
+            Reel
+          </p>
+        </div>
+
+        <div className="text-white text-[10px] text-center">
           <span>BASIC/DEPT®</span>
           <br />
-          <span>10 - 23©</span>
+          <span>2010 - 23©</span>
         </div>
       </div>
 
       <video
-        autoPlay
+        // autoPlay
         loop
         muted
         className="fixed inset-0  min-h-screen object-cover -z-10"
