@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../../Assets/Logo.jsx";
 import Video from "../../Assets/Header-video.mp4";
 import More from "../../Assets/more.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Modal from "./Header-Modal";
 import "./Header.css";
 import HeaderHover from "./HeaderHover.jsx";
