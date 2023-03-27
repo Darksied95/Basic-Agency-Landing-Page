@@ -40,6 +40,7 @@ const Header = () => {
         .querySelector("#header")
         .removeEventListener("mousemove", mousemoveHandler);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -82,7 +83,7 @@ const Header = () => {
         <Logo fill="#f4f4f4" />
       </div>
 
-      <div className=" hidden self-start flex-1 xl:block ">
+      <nav className=" hidden self-start flex-1 xl:block ">
         <ul className="text-white flex justify-around px-20 font-semibold uppercase">
           <li>
             <a href="/">Work</a>
@@ -103,7 +104,7 @@ const Header = () => {
             <a href="/">Contact</a>
           </li>
         </ul>
-      </div>
+      </nav>
       <button
         className="text-2xl text-[#f4f4f4] self-start xl:hidden"
         onClick={() => setshowModal(true)}
