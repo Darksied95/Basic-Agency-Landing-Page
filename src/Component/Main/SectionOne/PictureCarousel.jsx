@@ -5,18 +5,18 @@ import GoogleStore from "../../../Assets/GoogleStore.mp4";
 
 const PictureCarousel = () => {
   return (
-    <div>
-      <div>
+    <div className="inline-flex">
+      <div className="w-[500px]">
         <img src={RockClimbing} alt="/" />
         <h1>PATAGONIA </h1>
         <span>An Ecommerce Experience driven by patagonia's brand mission</span>
       </div>
-      <div>
+      <div className="w-[500px]">
         <img src={Tennis} alt="" />
         <h1> WILSON</h1>
         <span>A century-old sports brand finding its place in culture</span>
       </div>
-      <div>
+      <div className="w-[500px]">
         <video>
           <source src={GoogleStore} />
         </video>
