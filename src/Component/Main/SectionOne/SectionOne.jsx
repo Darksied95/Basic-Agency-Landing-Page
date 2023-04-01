@@ -4,9 +4,9 @@ import MediaSlider from "./MediaSlider";
 
 const SectionOne = () => {
   return (
-    <section className="p-6 overflow-auto">
+    <section className="px-5 xs:px-9 md:px-14">
       <div>
-        <p className="font-semibold text-lg mb-7">
+        <p className="font-semibold text-xl leading-6 mb-7 xs:max-w-[80vw] md:max-w-[48.5vw]">
           BASIC/DEPT® is a global branding and digital design agency building
           products, services, and eCommerce experiences that turn cultural
           values into company value.
@@ -15,7 +15,7 @@ const SectionOne = () => {
           <a href="/">SEE THE WORK</a>
         </button>
       </div>
-      <figure className="w-[60%] ml-auto">
+      <figure className="w-[53vw] ml-auto">
         <img src={BandD} alt="" />
       </figure>
       <MediaSlider />
