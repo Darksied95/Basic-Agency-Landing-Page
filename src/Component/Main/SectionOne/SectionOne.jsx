@@ -19,6 +19,16 @@ const SectionOne = () => {
         <img src={BandD} alt="" />
       </figure>
       <MediaSlider />
+      <div className="flex items-center justify-between border-t border-solid  border-black pt-4">
+        <p className=" text-xs xl:flex-auto xl:flex xl:justify-between xl:text-sm">
+          <span>00</span>
+          <br className="xl:hidden" />
+          <span>/05</span>
+        </p>
+        <div className="xl:flex-auto xl:justify-self-end">
+          <span className=" block w-2  aspect-square rounded-full bg-black ml-auto xl:w-3"></span>
+        </div>
+      </div>
     </section>
   );
 };

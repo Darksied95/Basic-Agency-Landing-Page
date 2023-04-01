@@ -5,7 +5,7 @@ import GoogleStore from "../../../Assets/GoogleStore.mp4";
 
 const MediaSlider = () => {
   return (
-    <div className="flex mt-8 overflow-x-auto mb-20">
+    <div className="flex mt-8 overflow-x-auto mb-20 scrollbar-none">
       <div className="min-w-[70vw]  mr-5 inline-block">
         <img src={RockClimbing} alt="/" />
         <h1 className="font-bold my-2 text-lg">PATAGONIA </h1>
