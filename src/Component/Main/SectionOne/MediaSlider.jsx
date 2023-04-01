@@ -3,7 +3,7 @@ import RockClimbing from "../../../Assets/RockClimbing.webp";
 import Tennis from "../../../Assets/Tennis.webp";
 import GoogleStore from "../../../Assets/GoogleStore.mp4";
 
-const PictureCarousel = () => {
+const MediaSlider = () => {
   return (
     <div className="flex mt-8 overflow-x-auto">
       <div className="min-w-[70vw]  mr-5 inline-block">
@@ -35,4 +35,4 @@ const PictureCarousel = () => {
   );
 };
 
-export default PictureCarousel;
+export default MediaSlider;

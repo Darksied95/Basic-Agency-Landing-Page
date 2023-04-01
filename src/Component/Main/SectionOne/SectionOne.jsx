@@ -1,6 +1,6 @@
 import React from "react";
 import BandD from "../../../Assets/B&D.svg";
-import PictureCarousel from "./PictureCarousel";
+import MediaSlider from "./MediaSlider";
 
 const SectionOne = () => {
   return (
@@ -18,7 +18,7 @@ const SectionOne = () => {
       <figure className="w-[60%] ml-auto">
         <img src={BandD} alt="" />
       </figure>
-      <PictureCarousel />
+      <MediaSlider />
     </section>
   );
 };
