@@ -8,3 +8,11 @@ body {
   font-family: "Space Grotesk", sans-serif;
   /* overflow: hidden; */
 }
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
