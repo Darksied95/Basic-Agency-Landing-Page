@@ -4,7 +4,7 @@ import PictureCarousel from "./PictureCarousel";
 
 const SectionOne = () => {
   return (
-    <section className="p-6">
+    <section className="p-6 overflow-auto">
       <div>
         <p className="font-semibold text-lg mb-7">
           BASIC/DEPT® is a global branding and digital design agency building

@@ -4,7 +4,6 @@ import Video from "../../Assets/Header-video.mp4";
 import More from "../../Assets/more.svg";
 import { useState } from "react";
 import Modal from "./Header-Modal";
-import "./Header.css";
 import HeaderHover from "./HeaderHover.jsx";
 
 const Header = () => {
