@@ -33,7 +33,7 @@ const Header = () => {
         // autoPlay
         loop
         muted
-        className="fixed inset-0  min-h-screen object-cover -z-10"
+        className="absolute top-0 left-0  min-h-screen object-cover -z-10"
       >
         <source src={Video} type="video/mp4" />
       </video>
