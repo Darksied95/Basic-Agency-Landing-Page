@@ -16,3 +16,10 @@ body {
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }
+
+.image-container img {
+  transition: transform 0.9s;
+}
+.image-container:hover img {
+  transform: scale(1.1);
+}
