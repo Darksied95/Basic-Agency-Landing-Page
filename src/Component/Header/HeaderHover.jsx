@@ -1,19 +1,23 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useCallback } from "react";
 
 const HeaderHover = ({ handleShowCursor, handleHideCursor }) => {
   const cursorRef = useRef();
 
-  const mousemoveHandler = (e) => {
-    const { clientX, clientY } = e;
-    if (clientY < 90) {
-      mouseleaveHandler();
-      handleShowCursor();
-      return;
-    }
-    cursorRef.current.style.top = clientY - 35 + "px";
-    cursorRef.current.style.left = clientX - 35 + "px";
-    handleHideCursor();
-  };
+  const mousemoveHandler = useCallback(
+    (e) => {
+      const { clientX, clientY } = e;
+      if (clientY < 90) {
+        mouseleaveHandler();
+        handleShowCursor();
+        return;
+      }
+      cursorRef.current.style.top = clientY - 35 + "px";
+      cursorRef.current.style.left = clientX - 35 + "px";
+      handleHideCursor();
+    },
+    [handleShowCursor, handleHideCursor]
+  );
+
   const mouseleaveHandler = () => {
     cursorRef.current.style.top = "50%";
     cursorRef.current.style.left = "50%";
@@ -31,9 +35,12 @@ const HeaderHover = ({ handleShowCursor, handleHideCursor }) => {
       document
         .querySelector("#header")
         .removeEventListener("mousemove", mousemoveHandler);
+
+      document
+        .querySelector("#header")
+        .removeEventListener("mouseleave", mouseleaveHandler);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [mousemoveHandler]);
   return (
     <div
       ref={cursorRef}
