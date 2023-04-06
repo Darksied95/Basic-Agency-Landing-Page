@@ -6,8 +6,8 @@ import SectionTwo from './Component/Main/SectionTwo/SectionTwo';
 function App() {
   return (
     <div>
-      {/* <Header />
-      <SectionOne /> */}
+      {/* <Header /> */}
+      {/* <SectionOne /> */}
       <SectionTwo />
     </div>
   );
