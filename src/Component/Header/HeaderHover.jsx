@@ -13,17 +13,21 @@ const HeaderHover = ({ headerRef, handleShowCursor, handleHideCursor }) => {
         handleShowCursor();
         return;
       }
-      cursorRef.current.style.top = clientY - 35 + "px";
-      cursorRef.current.style.left = clientX - 35 + "px";
-      cursorRef.current.style.transition = "0s";
+      Object.assign(cursorRef.current.style, {
+        top: clientY - 35 + "px",
+        left: clientX - 35 + "px",
+        transition: "0s",
+      });
       handleHideCursor();
     };
 
     const mouseleaveHandler = () => {
-      cursorRef.current.style.top = "50%";
-      cursorRef.current.style.left = "50%";
-      cursorRef.current.style.transform = "translate(-50%, -50%)";
-      cursorRef.current.style.transition = "1s";
+      Object.assign(cursorRef.current.style, {
+        top: "50%",
+        left: "50%",
+        transition: "1s",
+        transform: "translate(-50%, -50%)",
+      });
     };
 
     $header.addEventListener("mousemove", mousemoveHandler);
