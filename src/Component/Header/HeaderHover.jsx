@@ -1,10 +1,12 @@
-import { useRef, useEffect, useCallback } from "react";
+import { useRef, useEffect } from "react";
 
-const HeaderHover = ({ handleShowCursor, handleHideCursor }) => {
+const HeaderHover = ({ headerRef, handleShowCursor, handleHideCursor }) => {
   const cursorRef = useRef();
 
-  const mousemoveHandler = useCallback(
-    (e) => {
+  useEffect(() => {
+    const $header = headerRef.current;
+
+    const mousemoveHandler = (e) => {
       const { clientX, clientY } = e;
       if (clientY < 90) {
         mouseleaveHandler();
@@ -13,34 +15,27 @@ const HeaderHover = ({ handleShowCursor, handleHideCursor }) => {
       }
       cursorRef.current.style.top = clientY - 35 + "px";
       cursorRef.current.style.left = clientX - 35 + "px";
+      cursorRef.current.style.transition = "0s";
       handleHideCursor();
-    },
-    [handleShowCursor, handleHideCursor]
-  );
+    };
 
-  const mouseleaveHandler = () => {
-    cursorRef.current.style.top = "50%";
-    cursorRef.current.style.left = "50%";
-  };
-  useEffect(() => {
-    document
-      .querySelector("#header")
-      .addEventListener("mousemove", mousemoveHandler);
+    const mouseleaveHandler = () => {
+      cursorRef.current.style.top = "50%";
+      cursorRef.current.style.left = "50%";
+      cursorRef.current.style.transform = "translate(-50%, -50%)";
+      cursorRef.current.style.transition = "1s";
+    };
 
-    document
-      .querySelector("#header")
-      .addEventListener("mouseleave", mouseleaveHandler);
+    $header.addEventListener("mousemove", mousemoveHandler);
+
+    $header.addEventListener("mouseleave", mouseleaveHandler);
 
     return () => {
-      document
-        .querySelector("#header")
-        .removeEventListener("mousemove", mousemoveHandler);
+      $header.removeEventListener("mousemove", mousemoveHandler);
 
-      document
-        .querySelector("#header")
-        .removeEventListener("mouseleave", mouseleaveHandler);
+      $header.removeEventListener("mouseleave", mouseleaveHandler);
     };
-  }, [mousemoveHandler]);
+  }, [headerRef, handleHideCursor, handleShowCursor]);
   return (
     <div
       ref={cursorRef}

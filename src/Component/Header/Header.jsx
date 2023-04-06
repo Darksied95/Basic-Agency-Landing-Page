@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Logo from "../../Assets/Logo.jsx";
 import Video from "../../Assets/Header-video.mp4";
 import More from "../../Assets/more.svg";
-import { useState } from "react";
 import Modal from "./Header-Modal";
 import HeaderHover from "./HeaderHover.jsx";
 
 const Header = () => {
   const [showCursor, setShowCursor] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const headerRef = useRef();
 
   const handleShowCursor = () => setShowCursor(true);
   const handleHideCursor = () => setShowCursor(false);
@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <header
-      id="header"
+      ref={headerRef}
       className={`flex justify-between items-center px-10 pt-10 overflow-hidden relative h-screen xl:px-20 ${
         showCursor ? "cursor-auto" : "cursor-none"
       }`}
@@ -25,6 +25,7 @@ const Header = () => {
       {showModal && <Modal onCloseModal={handleCloseModal} />}
 
       <HeaderHover
+        headerRef={headerRef}
         handleShowCursor={handleShowCursor}
         handleHideCursor={handleHideCursor}
       />
