@@ -26,8 +26,8 @@ const Header = () => {
 
       <HeaderHover
         headerRef={headerRef}
-        handleShowCursor={handleShowCursor}
-        handleHideCursor={handleHideCursor}
+        showCursor={handleShowCursor}
+        hideCursor={handleHideCursor}
       />
 
       <video

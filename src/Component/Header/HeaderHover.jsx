@@ -1,27 +1,23 @@
 import { useRef, useEffect } from "react";
 
-const HeaderHover = ({ headerRef, handleShowCursor, handleHideCursor }) => {
+const HeaderHover = ({ headerRef, showCursor, hideCursor }) => {
   const cursorRef = useRef();
 
   useEffect(() => {
     const $header = headerRef.current;
 
     const mousemoveHandler = (e) => {
+      hideCursor();
       const { clientX, clientY } = e;
-      if (clientY < 90) {
-        mouseleaveHandler();
-        handleShowCursor();
-        return;
-      }
       Object.assign(cursorRef.current.style, {
         top: clientY - 35 + "px",
         left: clientX - 35 + "px",
         transition: "0s",
       });
-      handleHideCursor();
     };
 
     const mouseleaveHandler = () => {
+      showCursor();
       Object.assign(cursorRef.current.style, {
         top: "50%",
         left: "50%",
@@ -39,7 +35,7 @@ const HeaderHover = ({ headerRef, handleShowCursor, handleHideCursor }) => {
 
       $header.removeEventListener("mouseleave", mouseleaveHandler);
     };
-  }, [headerRef, handleHideCursor, handleShowCursor]);
+  }, [headerRef, hideCursor, showCursor]);
   return (
     <div
       ref={cursorRef}
