@@ -8,7 +8,14 @@ const HeaderHover = ({ headerRef, showCursor, hideCursor }) => {
 
     const mousemoveHandler = (e) => {
       hideCursor();
+
       const { clientX, clientY } = e;
+
+      if (clientY < 90) {
+        return mouseleaveHandler();
+      }
+
+      console.log(clientX);
       Object.assign(cursorRef.current.style, {
         top: clientY - 35 + "px",
         left: clientX - 35 + "px",
