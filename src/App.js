@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './Component/Header/Header';
 import SectionOne from './Component/Main/SectionOne/SectionOne';
+import SectionThree from './Component/Main/SectionThree/SectionThree';
 import SectionTwo from './Component/Main/SectionTwo/SectionTwo';
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
     <div>
       {/* <Header /> */}
       {/* <SectionOne /> */}
-      <SectionTwo />
+      {/* <SectionTwo /> */}
+      <SectionThree />
     </div>
   );
 }
