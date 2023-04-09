@@ -13,9 +13,9 @@ function App() {
       {/* <Header /> */}
       {/* <SectionOne /> */}
       {/* <SectionTwo /> */}
-      {/* <SectionThree /> */}
+      <SectionThree />
       {/* <SectionFour /> */}
-      <Footer />
+      {/* <Footer /> */}
 
     </div>
   );

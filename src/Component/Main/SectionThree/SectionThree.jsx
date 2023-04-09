@@ -3,16 +3,22 @@ import SectionThreeVideo from "../../../Assets/SectionThree.mp4";
 
 const SectionThree = () => {
   return (
-    <section className="mx-8">
+    <section className="mx-8 uppercase">
       <div>
         <video src={SectionThreeVideo} autoPlay loop muted></video>
       </div>
       <div>
-        <p>BASIC/DEPT® helps brands ● connect w/ culture</p>
-        <p>
-          ADdweek <span>agency spotlight</span>
+        <p className="text-4xl font-bold leading-8 mt-10">
+          BASIC/DEPT® helps brands{" "}
+          <span className="inline-block bg-red-500 w-7 aspect-square rounded-full"></span>{" "}
+          connect w/ culture
         </p>
-        <button>about us</button>
+        <p className="my-5 text-sm ">
+          ADweek <span className="font-semibold">agency spotlight</span>
+        </p>
+        <button className="uppercase py-2 px-6 font-bold text-xs border border-solid border-black rounded-3xl">
+          about us
+        </button>
       </div>
     </section>
   );

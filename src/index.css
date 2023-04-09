@@ -25,6 +25,10 @@ body {
   font-family: SctoGroteskA, sans-serif;
 }
 
+button,
+input {
+  font: inherit;
+}
 .scrollbar-none {
   scrollbar-width: none;
 }
