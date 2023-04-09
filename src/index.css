@@ -1,12 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap"); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: SctoGroteskA;
+  src: url(./Fonts/SctoGroteskA-Regular.1e986128.woff2) format(".woff2");
+}
+
+@font-face {
+  font-family: SctoGroteskA;
+  src: url(./Fonts/SctoGroteskA-Medium.2ede3563.woff2) format(".woff2");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: SctoGroteskA;
+  src: url(./Fonts/SctoGroteskA-Bold.d6497298.woff2) format(".woff2");
+  font-weight: bolder;
+}
+
 body {
   min-height: 100vh;
-  font-family: "Space Grotesk", sans-serif;
-  /* overflow: hidden; */
+  font-family: SctoGroteskA, sans-serif;
 }
 
 .scrollbar-none {

@@ -8,6 +8,10 @@ module.exports = {
       screens: {
         xs: "480px",
         md: "720px"
+      },
+      fontWeight: {
+        bold: "bolder",
+        semibold: "bold"
       }
     },
   },
