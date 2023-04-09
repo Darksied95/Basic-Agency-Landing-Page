@@ -28,10 +28,13 @@ const ArticleSlider = ({ updateSlider }) => {
   return (
     <ul
       ref={UlRef}
-      className="scrollbar-none relative ml-7 flex gap-4 overflow-scroll pb-20"
+      className="scrollbar-none relative ml-7  flex gap-4 overflow-scroll pb-20 md:ml-10 lg:ml-14"
     >
       {data.map(({ Link, Icon, IconSize, Name, Text }, index) => (
-        <li key={index} className="min-w-[72.2vw]">
+        <li
+          key={index}
+          className="min-w-[72.2vw] md:min-w-[44.5vw] lg:min-w-[28.6vw]"
+        >
           <div style={{ width: IconSize }}>
             <img src={Icon} alt="/" className="mb-3" />
             <hr className="block w-5 h-[2px] bg-black" />

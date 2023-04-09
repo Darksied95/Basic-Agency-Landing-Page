@@ -6,7 +6,7 @@ const ArticleSlider = ({ sliderCounter }) => {
       <div className="relative w-full h-full">
         <span
           ref={sliderCounter}
-          className="absolute block h-full w-[30%] bg-black z-10"
+          className="absolute block h-full w-[30%] bg-black md:w-[50%]"
         ></span>
       </div>
     </div>

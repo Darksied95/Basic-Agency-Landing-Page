@@ -13,8 +13,8 @@ const SectionTwo = () => {
 
   return (
     <section>
-      <h1 className="text-2xl leading-6 font-bold ml-[5vw] mb-14 uppercase">
-        Featured <br /> Engagements
+      <h1 className="text-2xl leading-6 font-bold ml-[5vw] mb-14 uppercase ">
+        Featured <br className="md:hidden" /> Engagements
       </h1>
       <ArticleCarousel updateSlider={updateSlider} />
       <ArticleSlider sliderCounter={sliderCounter} />
