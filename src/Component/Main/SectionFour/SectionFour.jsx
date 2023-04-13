@@ -8,7 +8,7 @@ const SectionFour = () => {
         <h6 className="font-bold text-xl">
           Featured <br /> News
         </h6>
-        <button className="uppercase outline outline-1 rounded-lg px-2 py-1 text-xs">
+        <button className="uppercase outline outline-1 rounded-3xl px-6 py-1 text-xs font-bold">
           view all
         </button>
       </div>
