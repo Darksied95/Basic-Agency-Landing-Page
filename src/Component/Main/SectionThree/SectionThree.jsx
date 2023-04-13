@@ -9,8 +9,8 @@ const SectionThree = () => {
       </div>
       <div>
         <p className="text-4xl font-bold leading-8 mt-10">
-          BASIC/DEPT® helps brands{" "}
-          <span className="inline-block bg-red-500 w-7 aspect-square rounded-full"></span>{" "}
+          BASIC/DEPT<sup>®</sup> helps brands
+          <span className="inline-block bg-red-500 w-7 aspect-square rounded-full" />
           connect w/ culture
         </p>
         <p className="my-5 text-sm ">
