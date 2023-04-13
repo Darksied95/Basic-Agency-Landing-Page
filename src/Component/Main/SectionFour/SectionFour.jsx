@@ -1,18 +1,21 @@
 import React from "react";
 import SingleArticle from "./SingleArticle";
+import { data } from "./data";
 
 const SectionFour = () => {
   return (
     <section className="uppercase">
       <div className="flex justify-between items-center mb-11 ">
-        <h6 className="font-bold text-xl">
-          Featured <br /> News
+        <h6 className="font-bold text-xl xl:text-[2.6rem] xl:leading-tight">
+          Featured <br className="md:hidden xl:block" /> News
         </h6>
-        <button className="uppercase outline outline-1 rounded-3xl px-6 py-1 text-xs font-bold">
+        <button className="uppercase outline outline-1 rounded-3xl px-6 py-1 text-xs font-bold xl:text-base">
           view all
         </button>
       </div>
-      <SingleArticle />
+      {data.map((each, i) => (
+        <SingleArticle key={i} {...each} />
+      ))}
     </section>
   );
 };
