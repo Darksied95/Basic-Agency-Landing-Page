@@ -13,8 +13,8 @@ function App() {
       {/* <Header /> */}
       {/* <SectionOne /> */}
       {/* <SectionTwo /> */}
-      <SectionThree />
-      {/* <SectionFour /> */}
+      {/* <SectionThree /> */}
+      <SectionFour />
       {/* <Footer /> */}
 
     </div>
