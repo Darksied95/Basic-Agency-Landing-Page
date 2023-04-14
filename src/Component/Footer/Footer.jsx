@@ -6,18 +6,20 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 const Footer = () => {
   return (
     <footer className="text-white">
-      <div className=" px-[6vw] bg-black opacity-90 pb-16 pt-1">
-        <div className="w-12 my-10">
+      <div className={`${styles.grid} px-[6vw] bg-black opacity-90 pb-16 pt-1`}>
+        <div className={`w-12 my-10 ${styles.first}`}>
           <BandD color="white" />
         </div>
-        <p className="max-w-[68vw] font-semibold text-xl mb-16">
+        <p
+          className={`max-w-[68vw] font-semibold text-xl mb-16 ${styles.second} xl:text-3xl xl:font-normal `}
+        >
           We collaborate with ambitious brands and people. Let's build.{" "}
           <a href="/" className="underline">
             biz@darksied.com
           </a>
         </p>
 
-        <div className="relative mb-10">
+        <div className={`relative mb-10 ${styles.third}`}>
           <h6
             className={`${styles.add_circle} uppercase text-sm font-bold mb-6 mt-6`}
           >
@@ -27,10 +29,10 @@ const Footer = () => {
             placeholder="Email Address"
             className="w-full bg-transparent border-b pb-4 placeholder:text-white placeholder:text-sm focus:outline-none "
           />
-          <AiOutlineArrowRight className="absolute bottom-5 right-0 w-5 min-h-[1.25rem] " />
+          <AiOutlineArrowRight className="absolute bottom-5 right-0 w-5 min-h-[1.25rem] xl:bottom-24 " />
         </div>
 
-        <div>
+        <div className={styles.fourth}>
           <h6
             className={`${styles.add_circle} uppercase text-sm font-bold mb-6 mt-6`}
           >
@@ -54,7 +56,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div>
+        <div className={styles.fourth}>
           <h6
             className={`${styles.add_circle} uppercase text-sm font-bold mb-6 mt-6`}
           >
@@ -75,7 +77,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div>
+        <div className={styles.fourth}>
           <h6
             className={`${styles.add_circle} uppercase text-sm font-bold mb-6 mt-6`}
           >
@@ -110,7 +112,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-black uppercase text-[.65rem] text-center py-6">
+      <div className="bg-black uppercase text-[.65rem] text-center py-6 xl:flex justify-between xl:px-16">
         <p className="mt-2 opacity-40">BASIC/DEPT®, Inc 10 - 23©</p>
         <p className="mt-2 opacity-40">
           Easy to understand, impossible to ignore.™

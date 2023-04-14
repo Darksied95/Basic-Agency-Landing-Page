@@ -14,3 +14,28 @@
   left: -20px;
   border-radius: 50%;
 }
+@media screen and (min-width: 1280px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 50% repeat(3, 1fr);
+    grid-template-rows: auto auto;
+  }
+  .first {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .second {
+    grid-column: 2/5;
+    grid-row: 1/2;
+  }
+  .third {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .fourth {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
