@@ -1,5 +1,5 @@
 import React from "react";
-import BandD from "../../../Assets/B&D.svg";
+import BandD from "../../../Assets/BandD.jsx";
 import MediaSlider from "./MediaSlider";
 
 const SectionOne = () => {
@@ -15,7 +15,7 @@ const SectionOne = () => {
           <a href="/">SEE THE WORK</a>
         </button>
         <div className="w-[53vw] ml-auto order-2  xl:w-[36.4vw] xl:h-[11vh]">
-          <img src={BandD} alt="" />
+          <BandD />
         </div>
       </div>
 

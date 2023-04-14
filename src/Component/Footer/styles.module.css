@@ -1,0 +1,16 @@
+.add_circle {
+  position: relative;
+  left: 20px;
+}
+
+.add_circle::before {
+  content: "";
+  width: 12px;
+  aspect-ratio: 1;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -20px;
+  border-radius: 50%;
+}
