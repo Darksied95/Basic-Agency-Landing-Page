@@ -7,7 +7,12 @@ const SectionThree = ({ appRef }) => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          appRef.current.style.backgroundColor = "black";
+          // appRef.current.style.
+          Object.assign(appRef.current.style, {
+            color: "red",
+            borderColor: "red !important",
+            outline: "red",
+          });
         } else {
           appRef.current.style.backgroundColor = "white";
         }
@@ -35,7 +40,7 @@ const SectionThree = ({ appRef }) => {
         <p className="my-5 text-sm ">
           ADweek <span className="font-semibold">agency spotlight</span>
         </p>
-        <button className="uppercase py-2 px-6 font-bold text-xs border border-solid border-black rounded-3xl">
+        <button className="uppercase py-2 px-6 font-bold text-xs outline outline-1 rounded-3xl">
           about us
         </button>
       </div>
