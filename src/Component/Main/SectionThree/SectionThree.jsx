@@ -3,14 +3,14 @@ import SectionThreeVideo from "../../../Assets/SectionThree.mp4";
 
 const SectionThree = () => {
   return (
-    <section className="mx-8 uppercase">
-      <div>
+    <section className="mx-8 uppercase md:flex flex-auto gap-8 relative lg:max-w-[90vw] lg:m-auto">
+      <div className="order-2  md:w-[50%]">
         <video src={SectionThreeVideo} autoPlay loop muted></video>
       </div>
-      <div>
-        <p className="text-4xl font-bold leading-8 mt-10">
+      <div className="md:w-[50%]">
+        <p className="text-4xl font-bold leading-8 mt-10 md:text-5xl md:mt-0 lg:text-[6vw]">
           BASIC/DEPT<sup>®</sup> helps brands
-          <span className="inline-block bg-red-500 w-7 aspect-square rounded-full" />
+          <span className="inline-block bg-red-500 w-7 aspect-square rounded-full lg:w-[4.5vw]" />
           connect w/ culture
         </p>
         <p className="my-5 text-sm ">

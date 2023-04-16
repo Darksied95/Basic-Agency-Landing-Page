@@ -10,13 +10,12 @@ import Footer from './Component/Footer/Footer';
 function App() {
   return (
     <div>
-      {/* <Header /> */}
-      {/* <SectionOne /> */}
-      {/* <SectionTwo /> */}
-      {/* <SectionThree /> */}
-      {/* <SectionFour /> */}
+      <Header />
+      <SectionOne />
+      <SectionTwo />
+      <SectionThree />
+      <SectionFour />
       <Footer />
-
     </div>
   );
 }

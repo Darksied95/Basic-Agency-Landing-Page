@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className={`flex justify-between items-center px-10 pt-10 overflow-hidden relative h-screen xl:px-20 ${
+      className={`flex justify-between items-center px-5 pt-3 overflow-hidden relative h-screen xl:px-20 ${
         showCursor ? "cursor-auto" : "cursor-none"
       }`}
     >
@@ -66,7 +66,7 @@ const Header = () => {
         </ul>
       </nav>
       <button
-        className="text-2xl text-[#f4f4f4] self-start xl:hidden"
+        className="uppercase font-bold text-[#f4f4f4] self-start xl:hidden"
         onClick={handleOpenModal}
       >
         Menu
