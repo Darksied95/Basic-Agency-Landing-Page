@@ -36,7 +36,7 @@ const SectionThree = ({ appRef }) => {
         <p className="my-5 text-sm ">
           ADweek <span className="font-semibold">agency spotlight</span>
         </p>
-        <button className="uppercase py-2 px-6 font-bold text-xs outline outline-1 rounded-3xl">
+        <button className="uppercase py-2 px-6 font-bold text-xs  outline outline-1 rounded-3xl">
           about us
         </button>
       </div>

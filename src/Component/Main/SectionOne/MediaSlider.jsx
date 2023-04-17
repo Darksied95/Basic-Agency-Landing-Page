@@ -12,7 +12,7 @@ const MediaSlider = () => {
             <img src={RockClimbing} alt="/" />
           </div>
           <h1 className="font-bold my-2 text-lg">PATAGONIA </h1>
-          <p className="max-w-[39.5%] md:max-w-[70%] uppercase font-bold text-xs opacity-70 ">
+          <p className="max-w-[39.5%] md:max-w-[70%] uppercase font-bold text-xs md:text-[0.65rem]  opacity-70 ">
             An Ecommerce Experience driven by patagonia's brand mission
           </p>
         </a>
@@ -23,7 +23,7 @@ const MediaSlider = () => {
             <img src={Tennis} alt="" />
           </div>
           <h1 className="font-bold my-2 text-lg"> WILSON</h1>
-          <p className="max-w-[39.5%] md:max-w-[70%] uppercase font-bold text-xs opacity-70 ">
+          <p className="max-w-[39.5%] md:max-w-[70%] uppercase font-bold text-xs md:text-[0.65rem]  opacity-70 ">
             A century-old sports brand finding its place in culture
           </p>
         </a>
@@ -34,7 +34,7 @@ const MediaSlider = () => {
             <source src={GoogleStore} type="video/mp4" />
           </video>
           <h1 className="font-bold my-2 text-lg">GOOGLE STORE </h1>
-          <p className="max-w-[39.5%] md:max-w-[70%] uppercase font-bold text-xs opacity-70 ">
+          <p className="max-w-[39.5%] md:max-w-[70%] uppercase font-bold text-xs md:text-[0.65rem]  opacity-70 ">
             An ecommerce experience helping google bring its hardware to people
             across the globe
           </p>

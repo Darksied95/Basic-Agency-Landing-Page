@@ -5,9 +5,11 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <footer className="text-white">
-      <div className={`${styles.grid} px-[6vw] bg-black opacity-90 pb-16 pt-1`}>
-        <div className={`w-12 my-10 ${styles.first}`}>
+    <footer className="text-white xl:mt-80">
+      <div
+        className={`${styles.grid} px-[6vw] bg-black opacity-90 pb-16 pt-1  xl:pt-20`}
+      >
+        <div className={`w-12 my-10 ${styles.first} xl:w-20 my-0`}>
           <BandD color="white" />
         </div>
         <p
