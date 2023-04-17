@@ -2,7 +2,7 @@ import React from "react";
 
 const ArticleSlider = ({ sliderCounter }) => {
   return (
-    <div className=" h-[2px]  bg-gray-300 w-[90vw] m-auto ">
+    <div className=" h-[2px]  bg-gray-300 w-[90vw] m-auto mb-12 ">
       <div className="relative w-full h-full">
         <span
           ref={sliderCounter}

@@ -21,7 +21,7 @@ const SectionOne = () => {
 
       <MediaSlider />
 
-      <div className="flex items-center justify-between border-t border-solid  border-black pt-4 mx-5 xs:mx-9 md:mx-12">
+      <div className="flex items-center justify-between border-t border-solid mt-8  mb-14 border-black pt-4 mx-5 xs:mx-9 md:mx-12">
         <p className=" text-xs xl:flex-auto xl:flex xl:justify-between xl:text-sm">
           <span>00</span>
           <br className="xl:hidden" />

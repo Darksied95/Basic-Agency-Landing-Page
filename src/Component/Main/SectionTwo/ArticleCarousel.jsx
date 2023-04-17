@@ -37,7 +37,7 @@ const ArticleSlider = ({ updateSlider }) => {
         >
           <div style={{ width: IconSize }}>
             <img src={Icon} alt="/" className="mb-3" />
-            <hr className="block w-5 h-[2px] bg-black" />
+            <hr className="block w-5 h-[3px] bg-black" />
           </div>
 
           <h2 className="font-bold text-xl mt-10 mb-4 uppercase">{Name}</h2>

@@ -5,7 +5,7 @@ import GoogleStore from "../../../Assets/GoogleStore.mp4";
 
 const MediaSlider = () => {
   return (
-    <ul className="flex mt-8 overflow-x-auto mb-44 scrollbar-none z-50 pl-5 xs:px-9 md:px-14">
+    <ul className="flex mt-8 overflow-x-auto scrollbar-none z-50 pl-5 xs:px-9 md:px-14 ">
       <li className="media-container min-w-[70vw] md:min-w-[40vw] xl:min-w-0  mr-5 xl:flex-1  overflow-hidden">
         <a href="/">
           <div className="overflow-hidden">

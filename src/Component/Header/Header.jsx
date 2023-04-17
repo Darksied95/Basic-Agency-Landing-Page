@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className={`flex justify-between items-center px-5 pt-3 overflow-hidden relative h-screen xl:px-20 ${
+      className={`flex justify-between items-center px-5 pt-3 overflow-hidden relative h-screen xl:px-20 outline ${
         showCursor ? "cursor-auto" : "cursor-none"
       }`}
     >
