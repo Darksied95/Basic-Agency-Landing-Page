@@ -1,23 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import SectionThreeVideo from "../../../Assets/SectionThree.mp4";
 
 const SectionThree = ({ appRef }) => {
   const sectionThreeRef = useRef();
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(([entry]) => {
-  //     console.log(entry.boundingClientRect);
-  //     if (entry.isIntersecting) {
-  //       Object.assign(appRef.current.style, {
-  //         backgroundColor: "black",
-  //         color: "red",
-  //         borderColor: "red !important",
-  //         outline: "red",
-  //       });
-  //     }
-  //   });
-
-  //   observer.observe(sectionThreeRef.current);
-  // });
 
   return (
     <section
