@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className={`flex justify-between items-center px-5 pt-3 overflow-hidden relative h-screen xl:px-20 outline ${
+      className={`flex justify-between items-center px-5 pt-6 overflow-hidden relative h-screen xl:px-20  ${
         showCursor ? "cursor-auto" : "cursor-none"
       }`}
     >
@@ -31,7 +31,7 @@ const Header = () => {
       />
 
       <video
-        // autoPlay
+        autoPlay
         loop
         muted
         className="absolute top-0 left-0  min-h-screen object-cover -z-10"
