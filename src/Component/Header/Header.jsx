@@ -4,16 +4,14 @@ import Video from "../../Assets/Header-video.mp4";
 import More from "../../Assets/more.svg";
 import Modal from "./Header-Modal";
 import HeaderHover from "./HeaderHover.jsx";
+import useHover from "../../Hooks/useHover.jsx";
 
 const Header = () => {
-  const [showCursor, setShowCursor] = useState(false);
-  const [showModal, setShowModal] = useState(false);
   const headerRef = useRef();
-
-  const handleShowCursor = () => setShowCursor(true);
-  const handleHideCursor = () => setShowCursor(false);
+  const [showModal, setShowModal] = useState(false);
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
+  const { showCursor, handleShowCursor, handleHideCursor } = useHover();
 
   return (
     <header
