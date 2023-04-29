@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import ArticleCarousel from "./ArticleCarousel";
 import ArticleSlider from "./ArticleSlider";
 import SectionTwoHover from "./SectionTwoHover";
@@ -9,6 +9,12 @@ const SectionTwo = () => {
   const sectionRef = useRef();
   const { showCursor, handleShowCursor, handleHideCursor } = useHover();
 
+  const [clicked, setClicked] = useState(false);
+
+  const handleMouseUp = () => setClicked(false);
+
+  const handleMouseDown = () => setClicked(true);
+
   function updateSlider(num) {
     let stringinfyNum = num + "%";
     sliderCounter.current.style.left = stringinfyNum;
@@ -16,7 +22,12 @@ const SectionTwo = () => {
   }
 
   return (
-    <section className="xl:mb-36 relative" ref={sectionRef}>
+    <section
+      className="xl:mb-36 relative"
+      ref={sectionRef}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+    >
       <h1 className="text-2xl leading-6 font-bold ml-[5vw] uppercase xl:ml-20 xl:text-5xl xl:mt-28">
         Featured
         <br className="md:hidden xl:block" />
@@ -27,6 +38,7 @@ const SectionTwo = () => {
         customRef={sectionRef}
         showCursor={handleShowCursor}
         hideCursor={handleHideCursor}
+        clicked={clicked}
       />
 
       <ArticleCarousel updateSlider={updateSlider} />
