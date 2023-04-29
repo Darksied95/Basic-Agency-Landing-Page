@@ -46,7 +46,7 @@ const Hover = ({ customRef, showCursor, hideCursor, children }) => {
   return (
     <div
       ref={cursorRef}
-      className="absolute top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none"
+      className="absolute top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none  z-10"
     >
       {children}
     </div>

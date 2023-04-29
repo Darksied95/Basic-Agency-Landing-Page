@@ -28,7 +28,7 @@ const ArticleSlider = ({ updateSlider }) => {
   return (
     <ul
       ref={UlRef}
-      className="scrollbar-none relative ml-7  flex gap-4 overflow-scroll pb-20 md:ml-10 lg:ml-14 xl:ml-20 xl:gap-16"
+      className="scrollbar-none relative ml-7 pt-14 xl:pt-28 flex gap-4 overflow-scroll pb-20 md:ml-10 lg:ml-14 xl:ml-20 xl:gap-16 outline"
     >
       {data.map(({ Link, Icon, IconSize, Name, Text }, index) => (
         <li

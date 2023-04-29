@@ -8,9 +8,11 @@ import useHover from "../../Hooks/useHover.jsx";
 
 const Header = () => {
   const headerRef = useRef();
+
   const [showModal, setShowModal] = useState(false);
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
+
   const { showCursor, handleShowCursor, handleHideCursor } = useHover();
 
   return (
