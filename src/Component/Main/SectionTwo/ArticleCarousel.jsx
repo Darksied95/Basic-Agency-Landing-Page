@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 
 const ArticleSlider = ({ updateSlider }) => {
   const UlRef = useRef(null);
+  const PreviousMouseValue = useRef(0);
 
   useEffect(() => {
     const { current } = UlRef;
@@ -18,17 +19,39 @@ const ArticleSlider = ({ updateSlider }) => {
       updateSlider(scrollLeftValueInPercentage);
     };
 
+    const mouseMoveHandler = (e) => {
+      console.log("working");
+      if (PreviousMouseValue.current <= e.clientX) {
+        current.scrollLeft += 40;
+        PreviousMouseValue.current = e.clientX;
+      } else {
+        current.scrollLeft -= 40;
+        PreviousMouseValue.current = e.clientX;
+      }
+    };
+    const mouseDownHandler = () => {
+      current.addEventListener("mousemove", mouseMoveHandler);
+    };
+
+    const mouseUpHandler = () => {
+      current.removeEventListener("mousemove", mouseMoveHandler);
+    };
+
     current.addEventListener("scroll", () => scrollHandler(current));
+    current.addEventListener("mousedown", mouseDownHandler);
+    current.addEventListener("mouseup", mouseUpHandler);
 
     return () => {
       current.removeEventListener("scroll", () => scrollHandler(current));
+      current.removeEventListener("mousedown", mouseDownHandler);
+      current.addEventListener("mouseup", mouseUpHandler);
     };
   });
 
   return (
     <ul
       ref={UlRef}
-      className="scrollbar-none relative ml-7 pt-14 xl:pt-28 flex gap-4 overflow-scroll pb-20 md:ml-10 lg:ml-14 xl:ml-20 xl:gap-16 outline"
+      className="scrollbar-none relative ml-7 pt-14 xl:pt-28 flex gap-4 overflow-scroll pb-20 md:ml-10 lg:ml-14 xl:ml-20 xl:gap-16 "
     >
       {data.map(({ Link, Icon, IconSize, Name, Text }, index) => (
         <li

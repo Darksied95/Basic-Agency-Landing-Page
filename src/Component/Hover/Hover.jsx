@@ -15,7 +15,6 @@ const Hover = ({ customRef, showCursor, hideCursor, children }) => {
         return mouseleaveHandler();
       }
 
-      console.log(clientX);
       Object.assign(cursorRef.current.style, {
         top: clientY - 35 + "px",
         left: clientX - 35 + "px",
