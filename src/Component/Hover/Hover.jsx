@@ -17,7 +17,7 @@ const Hover = ({ customRef, showCursor, hideCursor, children }) => {
 
       Object.assign(cursorRef.current.style, {
         top: clientY - 35 + "px",
-        left: clientX - 35 + "px",
+        left: clientX - 55 + "px",
         transition: "0s",
       });
     };
@@ -45,7 +45,7 @@ const Hover = ({ customRef, showCursor, hideCursor, children }) => {
   return (
     <div
       ref={cursorRef}
-      className="absolute top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none  z-10"
+      className="absolute top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none  z-0 cursor-none"
     >
       {children}
     </div>

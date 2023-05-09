@@ -20,7 +20,6 @@ const ArticleSlider = ({ updateSlider }) => {
     };
 
     const mouseMoveHandler = (e) => {
-      console.log("working");
       if (PreviousMouseValue.current <= e.clientX) {
         current.scrollLeft += 40;
         PreviousMouseValue.current = e.clientX;
@@ -51,7 +50,7 @@ const ArticleSlider = ({ updateSlider }) => {
   return (
     <ul
       ref={UlRef}
-      className="scrollbar-none relative ml-7 pt-14 xl:pt-28 flex gap-4 overflow-scroll pb-20 md:ml-10 lg:ml-14 xl:ml-20 xl:gap-16 "
+      className="scrollbar-none relative ml-7 pt-14 xl:pt-28 flex gap-4 overflow-scroll pb-20 md:ml-10 lg:ml-14 xl:ml-20 xl:gap-16 cursor-none"
     >
       {data.map(({ Link, Icon, IconSize, Name, Text }, index) => (
         <li
@@ -67,7 +66,7 @@ const ArticleSlider = ({ updateSlider }) => {
           <p className="text-sm font-semibold whitespace-normal opacity-70 xl:text-lg">
             {Text}
             {Link && (
-              <a href="/" className="underline">
+              <a href="/" className="underline cursor-none">
                 here.
               </a>
             )}
