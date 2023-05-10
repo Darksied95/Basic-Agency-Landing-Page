@@ -23,7 +23,7 @@ const SectionTwo = () => {
 
   return (
     <section
-      className="xl:mb-36 relative select-none "
+      className="relative select-none "
       ref={sectionRef}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}

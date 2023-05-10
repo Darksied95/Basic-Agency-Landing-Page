@@ -4,7 +4,7 @@ import MediaSlider from "./MediaSlider";
 
 const SectionOne = () => {
   return (
-    <section className="mt-7  md:mt-12 xl:mt-20">
+    <section className="pt-7  md:pt-12 xl:pt-20">
       <div className="xl:flex flex-wrap px-5 xs:px-9 md:px-12 xl:gap-6 xl:px-20 ">
         <p className="font-semibold text-xl leading-6 mb-9 xs:max-w-[80vw] md:max-w-[48.5vw] order-1 xl:text-4xl">
           BASIC/DEPT® is a global branding and digital design agency building
