@@ -7,7 +7,7 @@ const SectionThree = ({ appRef }) => {
   return (
     <section
       ref={sectionThreeRef}
-      className="mx-6 uppercase md:flex flex-auto gap-8 relative lg:max-w-[90vw] lg:m-auto mb-32 xl:pt-36 outline-blue-600"
+      className=" bg-white mx-6 uppercase md:flex flex-auto gap-8 relative z-20 lg:max-w-[90vw] lg:m-auto py-32 xl:pt-36 outline-blue-600"
     >
       <div className="order-2  md:w-[50%]">
         <video src={SectionThreeVideo} autoPlay loop muted></video>
