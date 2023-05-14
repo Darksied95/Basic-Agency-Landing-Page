@@ -1,13 +1,14 @@
-import { useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Hover = ({ customRef, showCursor, hideCursor, children }) => {
   const cursorRef = useRef();
-
+  const [mouseMoved, setMouseMoved] = useState(false);
   useEffect(() => {
     const $customRef = customRef.current;
 
     const mousemoveHandler = (e) => {
       hideCursor();
+      setMouseMoved(true);
 
       const { clientX, clientY } = e;
 
@@ -45,7 +46,9 @@ const Hover = ({ customRef, showCursor, hideCursor, children }) => {
   return (
     <div
       ref={cursorRef}
-      className="absolute top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none  z-0 cursor-none"
+      className={`${
+        mouseMoved ? "fixed" : "absolute"
+      }  top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none z-10 cursor-none`}
     >
       {children}
     </div>

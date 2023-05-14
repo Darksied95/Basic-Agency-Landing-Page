@@ -31,7 +31,7 @@ const Header = () => {
       />
 
       <video
-        autoPlay
+        // autoPlay
         loop
         muted
         className="absolute top-0 left-0  min-h-screen object-cover -z-10"

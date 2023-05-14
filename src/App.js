@@ -13,10 +13,12 @@ function App() {
   return (
     <div ref={appRef} style={{ transition: "all ease-in 1000ms" }}>
       <Header />
-      <SectionOne />
-      <SectionTwo />
-      <SectionThree appRef={appRef} />
-      <SectionFour />
+      <main className='relative z-20 bg-white'>
+        <SectionOne />
+        <SectionTwo />
+        <SectionThree appRef={appRef} />
+        <SectionFour />
+      </main>
       <Footer />
     </div>
   );
