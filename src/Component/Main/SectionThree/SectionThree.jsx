@@ -1,9 +1,23 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import SectionThreeVideo from "../../../Assets/SectionThree.mp4";
+import { AppContext } from "../../../App";
 
 const SectionThree = ({ appRef }) => {
   const sectionThreeRef = useRef();
 
+  const { updateSectionTwoMouse } = useContext(AppContext);
+  useEffect(() => {
+    const $sectionRef = sectionThreeRef.current;
+    $sectionRef.addEventListener("mousemove", () => {
+      updateSectionTwoMouse(false);
+    });
+
+    return () => {
+      $sectionRef.removeEventListener("mousemove", () => {
+        updateSectionTwoMouse(false);
+      });
+    };
+  });
   return (
     <section
       ref={sectionThreeRef}

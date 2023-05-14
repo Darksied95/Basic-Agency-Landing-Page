@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import BandD from "../../../Assets/BandD.jsx";
 import MediaSlider from "./MediaSlider";
+import { AppContext } from "../../../App.js";
 
 const SectionOne = () => {
+  const { updateHeaderMouse } = useContext(AppContext);
+  const sectionOneRef = useRef();
+  useEffect(() => {
+    const $sectionRef = sectionOneRef.current;
+    $sectionRef.addEventListener("mousemove", () => {
+      updateHeaderMouse(false);
+    });
+
+    return () => {
+      $sectionRef.removeEventListener("mousemove", () => {
+        updateHeaderMouse(false);
+      });
+    };
+  });
+
   return (
-    <section className="pt-7  md:pt-12 xl:pt-20  relative z-20 bg-white">
+    <section
+      ref={sectionOneRef}
+      className="pt-7  md:pt-12 xl:pt-20  relative z-20 bg-white"
+    >
       <div className="xl:flex flex-wrap px-5 xs:px-9 md:px-12 xl:gap-6 xl:px-20 ">
         <p className="font-semibold text-xl leading-6 mb-9 xs:max-w-[80vw] md:max-w-[48.5vw] order-1 xl:text-4xl">
           BASIC/DEPT® is a global branding and digital design agency building

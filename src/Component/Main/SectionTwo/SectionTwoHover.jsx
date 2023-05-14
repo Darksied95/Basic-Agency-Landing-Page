@@ -1,9 +1,12 @@
 import React from "react";
 import Hover from "./../../Hover/Hover";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { AppContext } from "../../../App";
 
 const SectionTwoHover = ({ customRef, showCursor, hideCursor, clicked }) => {
   const [showSectionTwoHover, setShowSectionTwoHover] = useState(true);
+  const { sectionTwoCustomMouse, updateSectionTwoMouse } =
+    useContext(AppContext);
 
   useEffect(() => {
     function updateSectionTwo() {
@@ -22,6 +25,8 @@ const SectionTwoHover = ({ customRef, showCursor, hideCursor, clicked }) => {
       customRef={customRef}
       showCursor={showCursor}
       hideCursor={hideCursor}
+      customMouseMoved={sectionTwoCustomMouse}
+      updateCustomMouse={updateSectionTwoMouse}
     >
       {!clicked ? (
         <div

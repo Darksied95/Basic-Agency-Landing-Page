@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 const Hover = ({
   visibleValue,
@@ -6,15 +6,16 @@ const Hover = ({
   showCursor,
   hideCursor,
   children,
+  customMouseMoved,
+  updateCustomMouse,
 }) => {
   const cursorRef = useRef();
-  const [mouseMoved, setMouseMoved] = useState(false);
   useEffect(() => {
     const $customRef = customRef.current;
 
     const mousemoveHandler = (e) => {
       hideCursor();
-      setMouseMoved(true);
+      updateCustomMouse(true);
       const { clientX, clientY } = e;
       if (clientY < visibleValue) {
         mouseleaveHandler();
@@ -47,12 +48,12 @@ const Hover = ({
 
       $customRef.removeEventListener("mouseleave", mouseleaveHandler);
     };
-  }, [customRef, hideCursor, showCursor]);
+  }, [customRef, hideCursor, showCursor, visibleValue, updateCustomMouse]);
   return (
     <div
       ref={cursorRef}
       className={`${
-        mouseMoved ? "fixed" : "absolute"
+        customMouseMoved ? "fixed" : "absolute"
       }  top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none z-10 cursor-none `}
     >
       {children}
