@@ -4,7 +4,7 @@ import ArticleSlider from "./ArticleSlider";
 import SectionTwoHover from "./SectionTwoHover";
 import useHover from "./../../../Hooks/useHover";
 
-const SectionTwo = () => {
+const SectionTwo = ({ showSectionTwoHover }) => {
   const sliderCounter = useRef();
   const sectionRef = useRef();
   const { showCursor, handleShowCursor, handleHideCursor } = useHover();
@@ -36,13 +36,13 @@ const SectionTwo = () => {
 
       <SectionTwoHover
         customRef={sectionRef}
+        clicked={clicked}
         showCursor={handleShowCursor}
         hideCursor={handleHideCursor}
-        clicked={clicked}
+        showSectionTwoHover={showSectionTwoHover}
       />
 
       <ArticleCarousel updateSlider={updateSlider} />
-
       <ArticleSlider sliderCounter={sliderCounter} />
     </section>
   );

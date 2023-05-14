@@ -1,7 +1,13 @@
 import React from "react";
 import Hover from "./../../Hover/Hover";
 
-const SectionTwoHover = ({ customRef, showCursor, hideCursor, clicked }) => {
+const SectionTwoHover = ({
+  customRef,
+  showCursor,
+  hideCursor,
+  clicked,
+  showSectionTwoHover,
+}) => {
   return (
     <Hover
       customRef={customRef}
@@ -9,7 +15,10 @@ const SectionTwoHover = ({ customRef, showCursor, hideCursor, clicked }) => {
       hideCursor={hideCursor}
     >
       {!clicked ? (
-        <div className="bg-[#f9cdcdff] rounded-full w-full aspect-square font-bold text-xs grid place-content-center">
+        <div
+          className={`bg-[#f9cdcdff] rounded-full w-full aspect-square font-bold text-xs grid place-content-center 
+         ${showSectionTwoHover ? "visible" : "invisible"}`}
+        >
           DRAG
         </div>
       ) : (

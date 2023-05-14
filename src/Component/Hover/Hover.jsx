@@ -48,7 +48,7 @@ const Hover = ({ customRef, showCursor, hideCursor, children }) => {
       ref={cursorRef}
       className={`${
         mouseMoved ? "fixed" : "absolute"
-      }  top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none z-10 cursor-none`}
+      }  top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none z-10 cursor-none `}
     >
       {children}
     </div>
