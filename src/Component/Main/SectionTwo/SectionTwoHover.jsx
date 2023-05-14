@@ -1,15 +1,24 @@
 import React from "react";
 import Hover from "./../../Hover/Hover";
+import { useEffect, useState } from "react";
 
-const SectionTwoHover = ({
-  customRef,
-  showCursor,
-  hideCursor,
-  clicked,
-  showSectionTwoHover,
-}) => {
+const SectionTwoHover = ({ customRef, showCursor, hideCursor, clicked }) => {
+  const [showSectionTwoHover, setShowSectionTwoHover] = useState(true);
+
+  useEffect(() => {
+    function updateSectionTwo() {
+      setShowSectionTwoHover(window.scrollY > 600 ? true : false);
+    }
+    window.addEventListener("scroll", updateSectionTwo);
+
+    return () => {
+      window.removeEventListener("scroll", updateSectionTwo);
+    };
+  }, [showSectionTwoHover]);
+
   return (
     <Hover
+      visibleValue={300}
       customRef={customRef}
       showCursor={showCursor}
       hideCursor={hideCursor}
@@ -17,7 +26,7 @@ const SectionTwoHover = ({
       {!clicked ? (
         <div
           className={`bg-[#f9cdcdff] rounded-full w-full aspect-square font-bold text-xs grid place-content-center 
-         ${showSectionTwoHover ? "visible" : "invisible"}`}
+         ${showSectionTwoHover ? "block" : "hidden"}`}
         >
           DRAG
         </div>

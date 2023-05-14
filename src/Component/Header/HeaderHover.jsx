@@ -3,6 +3,7 @@ import Hover from "../Hover/Hover";
 const HeaderHover = ({ headerRef, showCursor, hideCursor }) => {
   return (
     <Hover
+      visibleValue={90}
       customRef={headerRef}
       showCursor={showCursor}
       hideCursor={hideCursor}

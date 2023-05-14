@@ -10,25 +10,12 @@ import './App.css';
 function App() {
   const appRef = useRef()
 
-  const [showSectionTwoHover, setShowSectionTwoHover] = useState(true);
-
-  console.log(showSectionTwoHover, window.scrollY.toFixed(2));
-  useEffect(() => {
-    function updateSectionTwo() {
-      setShowSectionTwoHover(window.scrollY > 600 ? true : false)
-    }
-    window.addEventListener('scroll', updateSectionTwo)
-
-    return () => {
-      window.removeEventListener('scroll', updateSectionTwo)
-    }
-  }, [showSectionTwoHover])
   return (
     <div ref={appRef}  >
       <Header />
       <main className='relative z-20 bg-white'>
         <SectionOne />
-        <SectionTwo showSectionTwoHover={showSectionTwoHover} />
+        <SectionTwo />
         <SectionThree appRef={appRef} />
         <SectionFour />
       </main>

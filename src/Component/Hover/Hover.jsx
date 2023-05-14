@@ -1,6 +1,12 @@
 import { useState, useRef, useEffect } from "react";
 
-const Hover = ({ customRef, showCursor, hideCursor, children }) => {
+const Hover = ({
+  visibleValue,
+  customRef,
+  showCursor,
+  hideCursor,
+  children,
+}) => {
   const cursorRef = useRef();
   const [mouseMoved, setMouseMoved] = useState(false);
   useEffect(() => {
@@ -9,11 +15,10 @@ const Hover = ({ customRef, showCursor, hideCursor, children }) => {
     const mousemoveHandler = (e) => {
       hideCursor();
       setMouseMoved(true);
-
       const { clientX, clientY } = e;
-
-      if (clientY < 90) {
-        return mouseleaveHandler();
+      if (clientY < visibleValue) {
+        mouseleaveHandler();
+        return;
       }
 
       Object.assign(cursorRef.current.style, {

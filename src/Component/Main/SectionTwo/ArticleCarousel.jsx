@@ -1,7 +1,7 @@
 import data from "./data";
 import React, { useEffect, useRef } from "react";
 
-const ArticleSlider = ({ updateSlider }) => {
+const ArticleSlider = ({ updateSlider, updateClicked }) => {
   const UlRef = useRef(null);
   const PreviousMouseValue = useRef(0);
 
@@ -29,10 +29,12 @@ const ArticleSlider = ({ updateSlider }) => {
       }
     };
     const mouseDownHandler = () => {
+      updateClicked(true);
       current.addEventListener("mousemove", mouseMoveHandler);
     };
 
     const mouseUpHandler = () => {
+      updateClicked(false);
       current.removeEventListener("mousemove", mouseMoveHandler);
     };
 
