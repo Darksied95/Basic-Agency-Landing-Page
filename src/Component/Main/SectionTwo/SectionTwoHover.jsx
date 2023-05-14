@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Hover from "./../../Hover/Hover";
-import { useEffect, useState, useContext } from "react";
 import { AppContext } from "../../../App";
 
 const SectionTwoHover = ({ customRef, showCursor, hideCursor, clicked }) => {

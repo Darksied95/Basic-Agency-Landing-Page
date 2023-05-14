@@ -1,23 +1,13 @@
-import React, { useEffect, useRef, useContext } from "react";
+import React, { useRef, useContext } from "react";
 import BandD from "../../../Assets/BandD.jsx";
 import MediaSlider from "./MediaSlider";
 import { AppContext } from "../../../App.js";
+import useHoverReset from "../../../Hooks/useHoverReset.jsx";
 
 const SectionOne = () => {
   const { updateHeaderMouse } = useContext(AppContext);
   const sectionOneRef = useRef();
-  useEffect(() => {
-    const $sectionRef = sectionOneRef.current;
-    $sectionRef.addEventListener("mousemove", () => {
-      updateHeaderMouse(false);
-    });
-
-    return () => {
-      $sectionRef.removeEventListener("mousemove", () => {
-        updateHeaderMouse(false);
-      });
-    };
-  });
+  useHoverReset(sectionOneRef, updateHeaderMouse);
 
   return (
     <section

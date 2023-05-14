@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, createContext } from 'react';
+import { useRef, createContext } from 'react';
 import Header from './Component/Header/Header';
 import SectionOne from './Component/Main/SectionOne/SectionOne';
 import SectionTwo from './Component/Main/SectionTwo/SectionTwo';

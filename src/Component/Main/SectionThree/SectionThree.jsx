@@ -1,23 +1,13 @@
-import React, { useRef, useEffect, useContext } from "react";
-import SectionThreeVideo from "../../../Assets/SectionThree.mp4";
+import React, { useRef, useContext } from "react";
 import { AppContext } from "../../../App";
+import SectionThreeVideo from "../../../Assets/SectionThree.mp4";
+import useHoverReset from "../../../Hooks/useHoverReset";
 
 const SectionThree = ({ appRef }) => {
   const sectionThreeRef = useRef();
-
   const { updateSectionTwoMouse } = useContext(AppContext);
-  useEffect(() => {
-    const $sectionRef = sectionThreeRef.current;
-    $sectionRef.addEventListener("mousemove", () => {
-      updateSectionTwoMouse(false);
-    });
+  useHoverReset(sectionThreeRef, updateSectionTwoMouse);
 
-    return () => {
-      $sectionRef.removeEventListener("mousemove", () => {
-        updateSectionTwoMouse(false);
-      });
-    };
-  });
   return (
     <section
       ref={sectionThreeRef}
