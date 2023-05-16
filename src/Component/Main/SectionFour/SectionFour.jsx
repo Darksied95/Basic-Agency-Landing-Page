@@ -3,8 +3,10 @@ import SingleArticle from "./SingleArticle";
 import { data } from "./data";
 
 const SectionFour = () => {
+  // #f9cdcd
+  // #252422
   return (
-    <section className="bg-white uppercase max-w-[90vw] mx-auto lg:pt-28 md:pb-40 xl:pb-60 relative z-20 ">
+    <section className="bg-white uppercase max-w-[90vw] mx-auto lg:pt-28 md:pb-40 xl:pb-60 relative z-20 dark:bg-[#252422] dark:text-[#f9cdcd] ">
       <div className="flex justify-between items-center mb-11">
         <h6 className="font-bold text-2xl xl:text-[2.6rem] xl:leading-tight">
           Featured <br className="md:hidden xl:block" /> News

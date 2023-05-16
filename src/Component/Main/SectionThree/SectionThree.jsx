@@ -14,6 +14,7 @@ const SectionThree = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             document.getElementsByTagName("html")[0].classList.add("dark");
+            console.log("working");
           }
         });
       },
@@ -34,7 +35,10 @@ const SectionThree = () => {
       <div className="md:w-[50%] lg:sticky top-20 self-start">
         <p className="text-4xl font-bold leading-8 mt-10 md:text-5xl md:mt-0 lg:text-[6vw] ">
           BASIC/DEPT<sup>®</sup> helps brands
-          <span className="inline-block bg-black w-8  aspect-square rounded-full lg:w-[4.5vw]" />
+          <span
+            className="inline-block bg-black w-8  aspect-square rounded-full lg:w-[4.5vw] dark:-[#f9cdcd]"
+            data-big-circle=""
+          />
           connect w/ culture
         </p>
         <p className="my-5 text-sm xl:mb-20">

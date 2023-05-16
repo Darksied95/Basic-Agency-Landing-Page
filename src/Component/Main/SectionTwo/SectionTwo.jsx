@@ -22,7 +22,10 @@ const SectionTwo = () => {
   }
 
   return (
-    <section className="relative select-none " ref={sectionRef}>
+    <section
+      className="relative select-none dark:bg-[#252422] dark:text-[#f9cdcd] "
+      ref={sectionRef}
+    >
       <h1 className="text-2xl leading-6 font-bold ml-[5vw] uppercase xl:ml-20 xl:text-5xl xl:mt-28">
         Featured <br className="md:hidden xl:block" />
         Engagements

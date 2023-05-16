@@ -1,14 +1,14 @@
-import { useRef, createContext, useState } from 'react';
+import { createContext } from 'react';
 import Header from './Component/Header/Header';
 import SectionOne from './Component/Main/SectionOne/SectionOne';
 import SectionTwo from './Component/Main/SectionTwo/SectionTwo';
 import SectionThree from './Component/Main/SectionThree/SectionThree';
 import SectionFour from './Component/Main/SectionFour/SectionFour';
 import Footer from './Component/Footer/Footer';
-import './App.css';
 import useHover from './Hooks/useHover';
+import './App.css';
 
-const AppContext = createContext()
+export const AppContext = createContext()
 function App() {
   const { customMouseMoved: headerCustomMouse, updateCustomMouse: updateHeaderMouse } = useHover()
   const { customMouseMoved: sectionTwoCustomMouse, updateCustomMouse: updateSectionTwoMouse } = useHover()
@@ -37,5 +37,4 @@ function App() {
   );
 }
 
-export { AppContext }
 export default App;
