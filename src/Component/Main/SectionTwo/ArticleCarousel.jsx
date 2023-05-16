@@ -60,7 +60,7 @@ const ArticleSlider = ({ updateSlider, updateClicked }) => {
           className="min-w-[72.2vw] md:min-w-[44.5vw] lg:min-w-[28.6vw] xl:min-w-[26vw]"
         >
           <div style={{ width: IconSize }} className="xl:mb-24 ">
-            <img src={Icon} alt="/" className="mb-3 text-red-500 bg-red-500" />
+            <img src={Icon} alt="/" className="mb-3 " />
             <hr className="block w-5 h-[3px] bg-black dark:bg-[#f9cdcd]" />
           </div>
 

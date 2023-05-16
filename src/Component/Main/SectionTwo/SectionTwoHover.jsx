@@ -29,7 +29,7 @@ const SectionTwoHover = ({ customRef, showCursor, hideCursor, clicked }) => {
     >
       {!clicked ? (
         <div
-          className={`bg-[#f9cdcdff] rounded-full w-full aspect-square font-bold text-xs grid place-content-center 
+          className={`bg-[#f9cdcdff] text-black dark:text-black rounded-full w-full aspect-square font-bold text-xs grid place-content-center 
          ${showSectionTwoHover ? "block" : "hidden"}`}
         >
           DRAG
