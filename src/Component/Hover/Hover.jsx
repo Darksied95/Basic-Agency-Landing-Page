@@ -24,7 +24,7 @@ const Hover = ({
 
       Object.assign(cursorRef.current.style, {
         top: clientY - 35 + "px",
-        left: clientX - 55 + "px",
+        left: clientX - 65 + "px",
         transition: "0s",
       });
     };
@@ -54,7 +54,7 @@ const Hover = ({
       ref={cursorRef}
       className={`${
         customMouseMoved ? "fixed" : "absolute"
-      }  top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none z-10 cursor-none `}
+      }  top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none z-10 cursor-none`}
     >
       {children}
     </div>

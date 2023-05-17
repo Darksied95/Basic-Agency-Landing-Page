@@ -20,7 +20,7 @@ const ArticleSlider = ({ updateSlider, updateClicked }) => {
     };
 
     const mouseMoveHandler = (e) => {
-      if (PreviousMouseValue.current <= e.clientX) {
+      if (PreviousMouseValue.current >= e.clientX) {
         current.scrollLeft += 40;
         PreviousMouseValue.current = e.clientX;
       } else {
