@@ -23,7 +23,7 @@ function App() {
           updateSectionTwoMouse,
         }
       }>
-      <div >
+      <div>
         <Header />
         <main className='relative z-20 bg-white'>
           <SectionOne />

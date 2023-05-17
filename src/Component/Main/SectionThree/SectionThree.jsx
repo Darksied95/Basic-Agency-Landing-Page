@@ -12,9 +12,11 @@ const SectionThree = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          console.log(entry);
           if (entry.isIntersecting) {
             document.getElementsByTagName("html")[0].classList.add("dark");
-            console.log("working");
+          } else {
+            document.getElementsByTagName("html")[0].classList.remove("dark");
           }
         });
       },
@@ -25,10 +27,10 @@ const SectionThree = () => {
   }, []);
 
   return (
-    <section className="bg-white dark:text-[#f9cdcd] dark:bg-[#252422]">
+    <section className="bg-white dark:text-[#f9cdcd] dark:bg-[#252422] relative z-20">
       <div
         ref={sectionThreeRef}
-        className="  mx-6 uppercase md:flex flex-auto gap-8 relative z-20 lg:max-w-[90vw] lg:m-auto py-32 xl:pt-36 dark:text-[#f9cdcd] dark:bg-[#252422]"
+        className="mx-6 uppercase md:flex flex-auto gap-8  lg:max-w-[90vw] lg:m-auto py-32 xl:pt-36"
       >
         <div className="order-2  md:w-[50%]">
           <video src={SectionThreeVideo} autoPlay loop muted></video>
