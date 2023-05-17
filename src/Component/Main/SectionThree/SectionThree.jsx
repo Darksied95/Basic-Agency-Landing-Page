@@ -12,7 +12,6 @@ const SectionThree = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log(entry);
           if (entry.isIntersecting) {
             document.getElementsByTagName("html")[0].classList.add("dark");
           } else {

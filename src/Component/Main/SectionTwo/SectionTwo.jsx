@@ -7,7 +7,7 @@ import useHover from "./../../../Hooks/useHover";
 const SectionTwo = () => {
   const sliderCounter = useRef();
   const sectionRef = useRef();
-  const { showCursor, handleShowCursor, handleHideCursor } = useHover();
+  const { handleShowCursor, handleHideCursor } = useHover();
 
   const [clicked, setClicked] = useState(false);
 
