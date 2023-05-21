@@ -30,7 +30,9 @@ const Hover = ({
     };
 
     const mouseleaveHandler = () => {
+      console.log("left");
       showCursor();
+      updateCustomMouse(false);
       Object.assign(cursorRef.current.style, {
         top: "50%",
         left: "50%",
@@ -54,7 +56,7 @@ const Hover = ({
       ref={cursorRef}
       className={`${
         customMouseMoved ? "fixed" : "absolute"
-      }  top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none z-10 cursor-none`}
+      }  top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none z-10 `}
     >
       {children}
     </div>

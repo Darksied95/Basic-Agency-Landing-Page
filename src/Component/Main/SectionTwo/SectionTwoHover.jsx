@@ -20,7 +20,7 @@ const SectionTwoHover = ({ customRef, showCursor, hideCursor, clicked }) => {
 
   return (
     <Hover
-      visibleValue={300}
+      visibleValue={0}
       customRef={customRef}
       showCursor={showCursor}
       hideCursor={hideCursor}
