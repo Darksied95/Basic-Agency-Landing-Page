@@ -50,7 +50,8 @@ const ArticleSlider = ({ updateSlider }) => {
     return () => {
       current.removeEventListener("scroll", () => scrollHandler(current));
       current.removeEventListener("mousedown", mouseDownHandler);
-      current.addEventListener("mouseup", mouseUpHandler);
+      // current.removeEventListener("mouseup", mouseUpHandler);
+      //cleaning the above cause our code to behave weird // research why
     };
   });
 
