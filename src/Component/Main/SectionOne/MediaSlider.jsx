@@ -9,7 +9,7 @@ const MediaSlider = () => {
       <li className="media-container min-w-[70vw] md:min-w-[40vw] xl:min-w-0  mr-5 xl:flex-1  overflow-hidden">
         <a href="/">
           <div className="overflow-hidden">
-            <img src={RockClimbing} alt="/" />
+            <img src={RockClimbing} alt="/" loading="lazy" />
           </div>
           <h1 className="font-bold my-2 text-lg">PATAGONIA </h1>
           <p className="max-w-[39.5%] md:max-w-[70%] uppercase font-bold text-xs md:text-[0.65rem]  opacity-70 ">
@@ -20,7 +20,7 @@ const MediaSlider = () => {
       <li className="media-container min-w-[70vw] md:min-w-[40vw] xl:min-w-0 mr-5 xl:flex-1">
         <a href="/">
           <div className="overflow-hidden">
-            <img src={Tennis} alt="" />
+            <img src={Tennis} alt="" loading="lazy" />
           </div>
           <h1 className="font-bold my-2 text-lg"> WILSON</h1>
           <p className="max-w-[39.5%] md:max-w-[70%] uppercase font-bold text-xs md:text-[0.65rem]  opacity-70 ">

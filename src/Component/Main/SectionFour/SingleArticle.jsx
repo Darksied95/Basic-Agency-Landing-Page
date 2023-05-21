@@ -6,7 +6,7 @@ const SingleArticle = ({ img, heading, press }) => {
     <div
       className={`${style.grid} border-t border-black pt-4 font-bold mb-10 dark:border-[#f9cdcd]`}
     >
-      <img src={img} alt="" className={`${style["grid_img"]}`} />
+      <img src={img} alt="" className={`${style["grid_img"]}`} loading="lazy" />
       <h6
         className={`${style.grid_heading} text-2xl font-semibold opacity-70 mt-5 mb-10 md:mt-0 md:ml-4 xl:text-5xl`}
       >
