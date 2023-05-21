@@ -57,7 +57,7 @@ const ArticleSlider = ({ updateSlider }) => {
 
   const ContainerRef = useRef();
   return (
-    <div className="relative" ref={ContainerRef}>
+    <div className="relative cursor-none" ref={ContainerRef}>
       <SectionTwoHover
         customRef={ContainerRef}
         clicked={clicked}
@@ -66,7 +66,7 @@ const ArticleSlider = ({ updateSlider }) => {
       />
       <ul
         ref={UlRef}
-        className=" scrollbar-none relative ml-7 pt-14 xl:pt-28 flex gap-4 overflow-scroll pb-20 md:ml-10 lg:ml-14 xl:ml-20 xl:gap-16 cursor-none"
+        className=" scrollbar-none relative ml-7 pt-14 xl:pt-28 flex gap-4 overflow-scroll pb-20 md:ml-10 lg:ml-14 xl:ml-20 xl:gap-16 "
       >
         {data.map(({ Link, Icon, IconSize, Name, Text }, index) => (
           <li

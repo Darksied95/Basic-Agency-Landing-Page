@@ -47,7 +47,6 @@ const Hover = ({
 
     return () => {
       $customRef.removeEventListener("mousemove", mousemoveHandler);
-
       $customRef.removeEventListener("mouseleave", mouseleaveHandler);
     };
   }, [customRef, hideCursor, showCursor, visibleValue, updateCustomMouse]);
@@ -56,7 +55,7 @@ const Hover = ({
       ref={cursorRef}
       className={`${
         customMouseMoved ? "fixed" : "absolute"
-      }  top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none z-10 `}
+      }  top-1/2 left-1/2  w-24 flex flex-col justify-center lg:w-32 select-none z-10 cursor-none`}
     >
       {children}
     </div>
