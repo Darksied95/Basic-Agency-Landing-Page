@@ -5,9 +5,9 @@ import Logo from "../../Assets/Logo.jsx";
 
 const Modal = ({ onCloseModal }) => {
   return (
-    <div className=" fixed inset-0 bg-[#252422] text-[#f9cdcd] text-xl font-semibold h-screen z-20 cursor-auto py-10 px-10 md:text-3xl">
-      <div className="flex h-[30px] justify-between mb-16">
-        <div className="w-[130px] ">
+    <div className=" fixed inset-0 bg-[#252422] text-[#f9cdcd] text-xl font-semibold z-50 cursor-auto py-10 px-10 md:text-3xl">
+      <div className="flex h-[30px] justify-between mb-16 ">
+        <div className="w-[130px] self-center">
           <Logo fill={"#f9cdcd"} />
         </div>
 
@@ -38,8 +38,8 @@ const Modal = ({ onCloseModal }) => {
           <a href="/">Contact</a>
         </li>
         <li className="mb-5 uppercase text-lg font-bold md:text-2xl ">
-          <a href="/">
-            initiatives{" "}
+          <a href="/" className="flex gap-2">
+            <span>initiatives </span>
             <img src={Sign} alt="" className="w-4 inline -rotate-90" />
           </a>
         </li>
