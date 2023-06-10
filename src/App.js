@@ -7,6 +7,7 @@ import SectionFour from './Component/Main/SectionFour/SectionFour';
 import Footer from './Component/Footer/Footer';
 import useHover from './Hooks/useHover';
 import './App.css';
+import Cover from './Component/Cover/Cover';
 
 export const AppContext = createContext()
 function App() {
@@ -23,7 +24,8 @@ function App() {
           updateSectionTwoMouse,
         }
       }>
-      <div>
+      <>
+        <Cover />
         <Header />
         <main className='relative z-20 bg-white'>
           <SectionOne />
@@ -32,7 +34,7 @@ function App() {
           <SectionFour />
         </main>
         <Footer />
-      </div>
+      </>
     </AppContext.Provider>
   );
 }
