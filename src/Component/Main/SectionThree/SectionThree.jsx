@@ -11,20 +11,14 @@ const SectionThree = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            console.log("hello");
-            document.getElementsByTagName("html")[0].classList.add("dark");
-          } else {
-            document.getElementsByTagName("html")[0].classList.remove("dark");
-          }
-        });
+        document
+          .getElementsByTagName("html")[0]
+          .classList[entries[0].isIntersecting ? "add" : "remove"]("dark");
       },
       { threshold: 0.4 }
     );
-
     observer.observe(sectionThreeRef.current);
-  }, []);
+  });
 
   return (
     <section className="bg-white dark:text-[#f9cdcd] dark:bg-[#252422] relative z-20">
