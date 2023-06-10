@@ -26,11 +26,11 @@ const Hover = ({
         top: clientY - 35 + "px",
         left: clientX - 65 + "px",
         transition: "0s",
+        transform: "translate(-50%, -50%)",
       });
     };
 
     const mouseleaveHandler = () => {
-      console.log("left");
       showCursor();
       updateCustomMouse(false);
       Object.assign(cursorRef.current.style, {
