@@ -8,9 +8,12 @@ const ArticleSlider = ({ updateSlider }) => {
   const PreviousMouseValue = useRef(0);
   const { handleShowCursor, handleHideCursor } = useHover();
   const [clicked, setClicked] = useState(false);
+  const [isNotMobile, setIsNotMobile] = useState(false);
   const updateClicked = (bool) => setClicked(bool);
 
   useEffect(() => {
+    setIsNotMobile(window.innerWidth > 600);
+
     const { current } = UlRef;
 
     const scrollHandler = (current) => {
@@ -53,17 +56,19 @@ const ArticleSlider = ({ updateSlider }) => {
       // current.removeEventListener("mouseup", mouseUpHandler);
       //cleaning the above cause our code to behave weird // research why
     };
-  });
+  }, [isNotMobile, updateSlider]);
 
   const ContainerRef = useRef();
   return (
     <div className="relative cursor-none" ref={ContainerRef}>
-      <SectionTwoHover
-        customRef={ContainerRef}
-        clicked={clicked}
-        showCursor={handleShowCursor}
-        hideCursor={handleHideCursor}
-      />
+      {isNotMobile && (
+        <SectionTwoHover
+          customRef={ContainerRef}
+          clicked={clicked}
+          showCursor={handleShowCursor}
+          hideCursor={handleHideCursor}
+        />
+      )}
       <ul
         ref={UlRef}
         className=" scrollbar-none relative ml-7 pt-14 xl:pt-28 flex gap-4 overflow-scroll pb-20 md:ml-10 lg:ml-14 xl:ml-20 xl:gap-16 "
