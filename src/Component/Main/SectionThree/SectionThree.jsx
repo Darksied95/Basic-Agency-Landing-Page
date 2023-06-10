@@ -13,13 +13,14 @@ const SectionThree = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            console.log("hello");
             document.getElementsByTagName("html")[0].classList.add("dark");
           } else {
             document.getElementsByTagName("html")[0].classList.remove("dark");
           }
         });
       },
-      { threshold: 0.7 }
+      { threshold: 0.4 }
     );
 
     observer.observe(sectionThreeRef.current);
